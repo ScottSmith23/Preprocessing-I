@@ -144,13 +144,13 @@ h1 {
   font-weight: bold;
 }
 #navgroup {
+  display: flex;
   margin-top: 3%;
-  text-decoration: none;
   transition: 0.32s;
 }
-#navgroup .links {
+#navgroup a {
+  letter-spacing: 2px;
   display: flex;
-  justify-content: end;
 }
 #titlegroup {
   display: flex;
