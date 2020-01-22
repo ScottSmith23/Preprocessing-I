@@ -50,15 +50,30 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
+@import url('https://fonts.googleapis.com/css?family=Raleway|ZCOOL+QingKe+HuangYou&display=swap');
+@main-color:rgb(253, 228, 228);
+@second-color:rgb(210, 253, 175);
+@title-font:'Raleway', sans-serif;
+@button-font:'ZCOOL QingKe HuangYou', cursive;
 
+//mixins
+.center(){ //we want the parethesis because we want this mixin to be consumed by the compiler
+	display:flex;
+	justify-content:center;
+  }
+.supersize(){
+	font-size:30px;
+	font-weight: bold;
+}  
 html, body {
 	height: 100%;
 }
 body{
 	max-width: 90%;
-	display: flex;
+	flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -68,23 +83,260 @@ h1{
 }
 
 #navgroup{
+	
 	display: flex;
     margin-top: 3%;
   transition: 0.32s;
-	
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 95%;
+  @media( max-width: 500px ) {
+	nav{
+		width:100%;
+	}
+	.home1{
+		border-top: 1px solid black;
+	}
+	nav a{
+		
+		.center();
+		flex-wrap: wrap;
+		border-bottom: 1px solid black;
+		padding-top:3%;
+		padding-bottom:3%;
+		font-size: 30px;
+		&:hover{
+			transition: 0.32s;
+			background-color: rgb(250, 255, 206);
+			border-radius: 20px;
+		}
+	}
+	.links{
+		.center();
+		flex-direction: column;
+		width: 100%;
 
+	}
+	
+}
   .links{
+	display: flex;
 	
   }
   a{
+	  text-decoration: none;
 	letter-spacing:2px;
 	display: flex;
+	margin-right: 3%;
+	color: black;
+	font-size: 18px;
+	font-family: @title-font;
+	&:hover{
+		transition: 0.32s;
+		background-color: rgb(250, 255, 206);
+		border-radius: 20px;
+	}
+	
   }
 }
 #titlegroup{
-	display: flex;
+	border-radius: 20px;
+	.center();
 	max-height: 20%;
-	justify-content: center;
-	margin-top:20%;
+	margin-top:5%;
+	background-color: @main-color;
+	padding-bottom: 70%;
+	overflow: visible;
+	@media( max-width: 500px ) {
+		padding-bottom: 80%;
+		
+	}
+	
+	.topcontent{
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+	.bio{
+		margin-top: 3%;
+		margin-left: 3%;
+		width: 50%;
+		@media( max-width: 500px ) {
+			width:100%;
+		}
+	}
+	h1{
+		margin-top: 3%;
+		font-size: 50px;
+		font-family: @title-font;
+		overflow: hidden;
+	white-space: nowrap;
+	}
+	.firstpar{
+		margin-top:5%;
+		margin-left: 2%;
+		margin-right: 2%;
+		font-size: 20px;
+		opacity: 70%;
+		font-family: @title-font;
+		
+	}
+	.secondpar{
+		width: 100%;
+		display:flex;
+		border-top:1px solid gray;
+		padding-top: 3%;
+		margin-left: 4%;
+		margin-right: 4%;
+		margin-top:5%;
+		font-size: 20px;
+		opacity: 70%;
+		font-family: 'Raleway', sans-serif;;
+		background-color: @main-color;
+		@media( max-width: 580px ) {
+			display:none;
+		}
+	}
+	.selfimg{
+		margin-top: 3%;
+		margin-left: 3%;
+		border-radius: 20%;
+		width: 30%;
+		@media( max-width: 500px ) {
+			display:none;
+		}
+		
+	}
+	.button{
+	margin-top:5%;
+	margin-left: 7%;		
+	border:2px solid black;
+	padding: 15px 30px 10px 30px;
+	transition: 0.32s;
+	margin-bottom: 3%;
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: @second-color;
+	border-radius: 20px;
+	font-family: @button-font;
+	@media( max-width: 500px ) {
+		margin-top:10%;
+		.center();
+		margin-left: auto;
+		margin-right: auto;
+		padding: 30px 60px 30px 60px;
+		font-size: 30px;
+	}
+	}
+	
+}
+#midsection{
+	margin-top: 10%;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Raleway', sans-serif;;
+	h2{
+		.supersize();
+		margin-bottom: 3%;
+	
+	}
+	div{
+		width: 50%;	
+		@media( max-width: 500px ) {
+			width:100%;
+			margin-bottom: 3%;
+		}
+	}
+	.aboutsec{
+		font-size: 18px;
+		line-height: 1.6;
+	}
+	.tablesec{
+		margin-top:1.8%;
+	}
+	table, td, th {  
+		border: 1px solid #ddd;
+		text-align: left;
+		font-size: 18px;
+	  }
+	  
+	  table {
+		border-collapse: collapse;
+		width: 100%;
+	  }
+	  
+	  th, td {
+		padding: 10px;
+		font-weight: bold;
+	  }
+	  
 }
 
+#lastsection{
+	font-family: 'Raleway', sans-serif;;
+	h2{
+		.supersize();
+		margin-bottom: 3%;
+		
+	}
+	border-top: 1px solid gray;
+	margin-top:5%;
+	padding-top: 5%;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	  }
+	  
+	  th, td {
+		text-align: left;
+		padding: 8px;
+	  }
+	  th{
+		  font-weight: bold;
+		  font-size: 18px;
+	  }
+	  
+	  tr:nth-child(even) {background-color: #f2f2f2;}
+
+}
+
+footer{
+	font-family: 'Raleway', sans-serif;;
+	width:100%;
+	.center();
+	margin-top: 3%;
+	padding-top:5%;
+	padding-bottom: 5%;
+	background-color: black;
+	color: white;
+	overflow: hidden;
+
+}
+
+#contactform{
+	font-family: 'Raleway', sans-serif;;
+	h2{
+		.supersize();
+		margin-bottom: 3%;
+		
+	}
+	padding: 3% 0;
+  text-align:center;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	margin-top:3%;
+	background-color: @second-color;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+    form{
+
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		.center();
+		flex-direction: column;
+		
+	}
+}
