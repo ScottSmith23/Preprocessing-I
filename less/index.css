@@ -443,6 +443,7 @@ footer {
   font-weight: bold;
   margin-bottom: 3%;
   font-family: 'Raleway', sans-serif;
+  margin-top: 5%;
 }
 #portfolio h3 {
   text-decoration: none;
@@ -465,4 +466,50 @@ footer {
   padding-top: 3%;
   justify-content: center;
   background-color: #d2fdaf;
+}
+@media (max-width: 800px) {
+  #portfolio .col-4 {
+    width: 100%;
+  }
+}
+#portfolio .button {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  border: 2px solid black;
+  padding: 15px 30px 15px 30px;
+  transition: 0.32s;
+  margin-bottom: 3%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #d2fdaf;
+  border-radius: 20px;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+#portfolio .button:hover {
+  cursor: pointer;
+  background: #caf4ff;
+  color: teal;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#portfolio .button:active {
+  background-color: #f3961c;
+  box-shadow: 0 5px #666;
+  color: black;
+  transform: translateY(4px);
+}
+@media (max-width: 500px) {
+  #portfolio .button {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 60px 30px 60px;
+    font-size: 30px;
+  }
 }
