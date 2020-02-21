@@ -3,10 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>Scott Smith Portfolio</title>
 
-  <title>My Resume</title>
-
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="less/index.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +13,115 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <section id="navgroup">
+    <nav>
+      <div class="links">
+    <a class="home1" href="#">Home</a>
+    <a href="#midsection">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#contactform">Contact</a>
+  </div>
+    </nav>
+    </section>
+  <section id="titlegroup">
+    <div class="topcontent">
+    <img class="selfimg" src="images/self.png" alt="Image of Scott Smith">
+    <div class="bio">
+  <h1>Scott Smith</h1>
+  <p class="firstpar">I am a <strong>Full Stack Web Developer</strong>, I love learning about technology and I enjoy working with others</p>
+</div> 
+<p class="secondpar">I am interested in working on side projects, Let me know if you have any offers by contacting me</p>
+<a href ="#contactform" class="button">
+  Get in touch
+</a>
+</div>
+
+
+</section>
+<section id="midsection">
+  <div class="aboutsec">
+    <h2>About me</h2>
+    Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.
+    </div>
+    <div class="tablesec">
+      <h2>Things I'm good at</h2>
+
+<table>
+  <tr>
+    <th>Full Stack Web development</th>
+    
+  </tr>
+  <tr>
+    <td>Great Coworker</td>
+    
+  </tr>
+  <tr>
+    <td>Always willing to learn more</td>
+    
+  </tr>
+  <tr>
+    <td>Adapt quickly to new systems</td>
+    
+  </tr>
+  <tr>
+    <td>Taking long naps</td>
+    
+  </tr>
+</table></div>
+
+
+</section>
+<section id="lastsection">
+  <h2>Work History</h2>
+  <table>
+    <tr>
+    <th>Yrs</th>
+    <th>Company</th>
+    <th>Title</th>
+    <th>Tech Used</th>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>Teletech</td>
+    <td>Tech Support Intern</td>
+    <td>Powershell</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>Lorem</td>
+    <td>Ipsum</td>
+    <td>Dolor</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>Hello</td>
+    <td>World</td>
+    <td>2.0</td>
+    </tr>
+ 
+  </table>
+
+
+
+</section>
+<section id="contactform">
+  <h2>Contact me!</h2>
+  <div class="form">
+    <form method="POST" action="https://formspree.io/YOUREMAILHERE">
+      <label for="name"><b style="font-weight: bold;">Name</b></label>
+      <input type="name" name="name">
+      <label for="email"><b style="font-weight: bold;">Email</b></label>
+      <input type="email" name="email">
+      <label for="message"><b style="font-weight: bold;">Message</b></label>
+      <textarea name="message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+  
+</section>
+<footer>
+  Copyright Awesomeness! 2020
+  </footer>
 </body>
 </html>
